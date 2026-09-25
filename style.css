@@ -295,7 +295,7 @@ img {
 }
 
 
-/* Conteneur de l'image sans cercle */
+/* Conteneur de l'image agrandi */
 
 .orbit-center {
     position: absolute;
@@ -305,8 +305,8 @@ img {
 
     transform: translate(-50%, -50%);
 
-    width: 320px;
-    height: 380px;
+    width: 400px;
+    height: 470px;
 
     border: none;
 
@@ -936,8 +936,8 @@ footer a:hover {
     }
 
     .orbit-center {
-        width: 200px;
-        height: 200px;
+        width: 260px;
+        height: 300px;
     }
 
     .scroll-indicator {
