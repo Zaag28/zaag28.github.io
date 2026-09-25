@@ -1,6 +1,6 @@
-/* ================================
+/* =========================================
    NAVBAR SCROLL EFFECT
-================================ */
+========================================= */
 
 const navbar = document.getElementById("navbar");
 
@@ -15,19 +15,21 @@ window.addEventListener("scroll", () => {
 
         navbar.style.background =
             "rgba(8, 8, 12, 0.45)";
+
     }
 
 });
 
 
 
-/* ================================
+/* =========================================
    SCROLL REVEAL
-================================ */
+========================================= */
 
 const revealElements = document.querySelectorAll(
     ".project-card, .skill-card, .timeline-item, .about-card"
 );
+
 
 const observer = new IntersectionObserver(
 
