@@ -1,12 +1,14 @@
 /* =========================
-   HERO IMAGE - FINAL
+   HERO IMAGE
 ========================= */
 
 .hero-image {
     position: absolute;
 
     top: 0;
-    right: -8%;
+
+    /* Décale l'image vers la gauche */
+    right: 2%;
 
     width: 55%;
     height: 100vh;
@@ -19,9 +21,12 @@
 }
 
 
-/* Image */
+/* =========================
+   IMAGE
+========================= */
 
 .hero-image img {
+
     width: 100%;
     height: 100%;
 
@@ -31,31 +36,40 @@
 
     transform: scale(1.02);
 
-    /*
-       Fondu gauche
-       pour intégrer l'image
-       au background
-    */
+
+    /* Fondu horizontal */
 
     -webkit-mask-image:
         linear-gradient(
             to right,
+
             transparent 0%,
+
             rgba(0,0,0,0.25) 12%,
+
             rgba(0,0,0,0.75) 28%,
+
             black 42%,
+
             black 82%,
+
             transparent 100%
         );
 
     mask-image:
         linear-gradient(
             to right,
+
             transparent 0%,
+
             rgba(0,0,0,0.25) 12%,
+
             rgba(0,0,0,0.75) 28%,
+
             black 42%,
+
             black 82%,
+
             transparent 100%
         );
 
@@ -63,7 +77,9 @@
 }
 
 
-/* Fondu haut + bas */
+/* =========================
+   FONDU HAUT / BAS
+========================= */
 
 .hero-image::after {
 
@@ -77,16 +93,23 @@
 
         linear-gradient(
             to bottom,
+
             #08080c 0%,
+
             transparent 15%,
+
             transparent 80%,
+
             #08080c 100%
         ),
 
         linear-gradient(
             to right,
+
             #08080c 0%,
+
             transparent 40%,
+
             transparent 100%
         );
 
@@ -94,10 +117,14 @@
 }
 
 
-/* Léger effet au survol */
+/* =========================
+   HOVER
+========================= */
 
 .hero-image:hover img {
+
     transform: scale(1.04);
+
 }
 
 
@@ -106,19 +133,23 @@
 ========================= */
 
 .hero-content {
+
     position: relative;
+
     z-index: 10;
 }
 
 
 .scroll-indicator {
+
     position: relative;
+
     z-index: 10;
 }
 
 
 /* =========================
-   RESPONSIVE
+   RESPONSIVE TABLET
 ========================= */
 
 @media (max-width: 900px) {
@@ -127,7 +158,7 @@
 
         width: 65%;
 
-        right: -8%;
+        right: 2%;
 
         opacity: 0.55;
 
@@ -135,6 +166,10 @@
 
 }
 
+
+/* =========================
+   RESPONSIVE MOBILE
+========================= */
 
 @media (max-width: 600px) {
 
@@ -146,7 +181,7 @@
 
         top: 15%;
 
-        right: -5%;
+        right: 0;
 
         opacity: 0.35;
 
@@ -158,18 +193,26 @@
         -webkit-mask-image:
             linear-gradient(
                 to bottom,
+
                 transparent 0%,
+
                 black 25%,
+
                 black 70%,
+
                 transparent 100%
             );
 
         mask-image:
             linear-gradient(
                 to bottom,
+
                 transparent 0%,
+
                 black 25%,
+
                 black 70%,
+
                 transparent 100%
             );
 
