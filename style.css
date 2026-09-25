@@ -264,6 +264,7 @@ img {
 
 /* =========================================
    HERO IMAGE
+   Cercle et cadre supprimés
 ========================================= */
 
 .hero-orbit {
@@ -273,25 +274,28 @@ img {
 
     width: 450px;
     height: 450px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 5;
 }
+
+
+/* Suppression des deux cercles */
 
 .orbit {
-    position: absolute;
-
-    inset: 0;
-
-    border: 1px solid rgba(139, 92, 246, 0.25);
-
-    border-radius: 50%;
+    display: none;
 }
 
-.orbit-one {
-    transform: rotate(-60deg) scaleY(0.55);
-}
-
+.orbit-one,
 .orbit-two {
-    transform: rotate(60deg) scaleY(0.55);
+    display: none;
 }
+
+
+/* Conteneur de l'image sans cercle */
 
 .orbit-center {
     position: absolute;
@@ -301,37 +305,46 @@ img {
 
     transform: translate(-50%, -50%);
 
-    width: 260px;
-    height: 260px;
+    width: 320px;
+    height: 380px;
 
-    border-radius: 50%;
+    border: none;
 
-    overflow: hidden;
+    border-radius: 0;
 
-    border: 2px solid rgba(155, 108, 255, 0.7);
+    overflow: visible;
 
-    box-shadow:
-        0 0 40px rgba(139, 92, 246, 0.3),
-        0 0 100px rgba(139, 92, 246, 0.15);
+    background: transparent;
+
+    box-shadow: none;
 
     z-index: 5;
-
-    background: #101014;
 }
+
+
+/* Image */
 
 .orbit-center img {
     width: 100%;
     height: 100%;
 
-    object-fit: cover;
+    object-fit: contain;
 
     display: block;
+
+    border: none;
+
+    border-radius: 0;
+
+    background: transparent;
+
+    box-shadow: none;
 
     transition: transform 0.7s ease;
 }
 
 .orbit-center:hover img {
-    transform: scale(1.08);
+    transform: scale(1.04);
 }
 
 
