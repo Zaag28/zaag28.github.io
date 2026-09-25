@@ -55,7 +55,7 @@ img {
 
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 
-    transition: background 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .logo {
@@ -81,7 +81,7 @@ img {
     font-size: 13px;
     color: #a8a8b3;
 
-    transition: color 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .navbar nav a:hover {
@@ -116,8 +116,6 @@ img {
     padding: 120px 8% 80px;
 
     overflow: hidden;
-
-    background: #08080c;
 }
 
 .hero-glow {
@@ -265,61 +263,75 @@ img {
 
 
 /* =========================================
-   HOME IMAGE
-   IMAGE SANS CERCLE
+   HERO IMAGE
 ========================================= */
 
-.hero-image {
+.hero-orbit {
     position: absolute;
 
-    right: 4%;
-
-    top: 50%;
-
-    transform: translateY(-50%);
+    right: 6%;
 
     width: 450px;
-    height: 550px;
+    height: 450px;
+}
 
-    display: flex;
+.orbit {
+    position: absolute;
 
-    align-items: center;
-    justify-content: center;
+    inset: 0;
+
+    border: 1px solid rgba(139, 92, 246, 0.25);
+
+    border-radius: 50%;
+}
+
+.orbit-one {
+    transform: rotate(-60deg) scaleY(0.55);
+}
+
+.orbit-two {
+    transform: rotate(60deg) scaleY(0.55);
+}
+
+.orbit-center {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 260px;
+    height: 260px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    border: 2px solid rgba(155, 108, 255, 0.7);
+
+    box-shadow:
+        0 0 40px rgba(139, 92, 246, 0.3),
+        0 0 100px rgba(139, 92, 246, 0.15);
 
     z-index: 5;
 
-    background: transparent;
-
-    pointer-events: none;
+    background: #101014;
 }
 
-.hero-image::before {
-    display: none;
-}
-
-.hero-image img {
+.orbit-center img {
     width: 100%;
     height: 100%;
 
-    object-fit: contain;
+    object-fit: cover;
 
     display: block;
 
-    background: transparent;
-
-    border: none;
-
-    border-radius: 0;
-
-    box-shadow: none;
-
-    filter: none;
-
-    transition: transform 0.6s ease;
+    transition: transform 0.7s ease;
 }
 
-.hero-image:hover img {
-    transform: scale(1.03);
+.orbit-center:hover img {
+    transform: scale(1.08);
 }
 
 
@@ -837,7 +849,7 @@ footer a:hover {
 
 
 /* =========================================
-   RESPONSIVE - TABLET
+   RESPONSIVE
 ========================================= */
 
 @media (max-width: 1000px) {
@@ -846,13 +858,10 @@ footer a:hover {
         gap: 15px;
     }
 
-    .hero-image {
-        right: -60px;
+    .hero-orbit {
+        right: -80px;
 
-        width: 430px;
-        height: 520px;
-
-        opacity: 0.8;
+        opacity: 0.6;
     }
 
     .hero-content {
@@ -870,10 +879,6 @@ footer a:hover {
 }
 
 
-/* =========================================
-   RESPONSIVE - MOBILE
-========================================= */
-
 @media (max-width: 750px) {
 
     .navbar {
@@ -888,8 +893,6 @@ footer a:hover {
         padding: 130px 7% 100px;
 
         min-height: 900px;
-
-        align-items: flex-start;
     }
 
     .hero-content {
@@ -906,17 +909,22 @@ footer a:hover {
         font-size: 17px;
     }
 
-    .hero-image {
-        width: 300px;
-        height: 360px;
+    .hero-orbit {
+        width: 330px;
+        height: 330px;
 
         right: 50%;
 
-        top: 570px;
-
         transform: translateX(50%);
 
-        opacity: 1;
+        top: 570px;
+
+        opacity: 0.7;
+    }
+
+    .orbit-center {
+        width: 200px;
+        height: 200px;
     }
 
     .scroll-indicator {
@@ -952,10 +960,6 @@ footer a:hover {
 }
 
 
-/* =========================================
-   RESPONSIVE - SMALL MOBILE
-========================================= */
-
 @media (max-width: 450px) {
 
     .hero h1 {
@@ -973,13 +977,6 @@ footer a:hover {
 
     .contact-buttons {
         flex-direction: column;
-    }
-
-    .hero-image {
-        width: 260px;
-        height: 320px;
-
-        top: 560px;
     }
 
 }
