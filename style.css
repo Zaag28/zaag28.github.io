@@ -6,12 +6,10 @@
     position: absolute;
 
     top: 0;
-
-    /* Décale l'image vers la gauche */
-    right: 2%;
+    right: 0;
 
     width: 55%;
-    height: 100vh;
+    height: 100%;
 
     z-index: 1;
 
@@ -21,12 +19,9 @@
 }
 
 
-/* =========================
-   IMAGE
-========================= */
+/* Image */
 
 .hero-image img {
-
     width: 100%;
     height: 100%;
 
@@ -36,50 +31,37 @@
 
     transform: scale(1.02);
 
-
-    /* Fondu horizontal */
+    /*
+       Fondu horizontal
+    */
 
     -webkit-mask-image:
         linear-gradient(
             to right,
-
             transparent 0%,
-
             rgba(0,0,0,0.25) 12%,
-
             rgba(0,0,0,0.75) 28%,
-
             black 42%,
-
             black 82%,
-
             transparent 100%
         );
 
     mask-image:
         linear-gradient(
             to right,
-
             transparent 0%,
-
             rgba(0,0,0,0.25) 12%,
-
             rgba(0,0,0,0.75) 28%,
-
             black 42%,
-
             black 82%,
-
             transparent 100%
         );
-
-    transition: transform 0.8s ease;
 }
 
 
-/* =========================
-   FONDU HAUT / BAS
-========================= */
+/*
+   Fondu haut / bas
+*/
 
 .hero-image::after {
 
@@ -93,23 +75,16 @@
 
         linear-gradient(
             to bottom,
-
             #08080c 0%,
-
             transparent 15%,
-
             transparent 80%,
-
             #08080c 100%
         ),
 
         linear-gradient(
             to right,
-
             #08080c 0%,
-
             transparent 40%,
-
             transparent 100%
         );
 
@@ -117,105 +92,19 @@
 }
 
 
-/* =========================
-   HOVER
-========================= */
-
-.hero-image:hover img {
-
-    transform: scale(1.04);
-
-}
-
-
-/* =========================
-   HERO CONTENT
-========================= */
+/* HERO CONTENT */
 
 .hero-content {
-
     position: relative;
 
     z-index: 10;
 }
 
+
+/* Scroll */
 
 .scroll-indicator {
-
     position: relative;
 
     z-index: 10;
-}
-
-
-/* =========================
-   RESPONSIVE TABLET
-========================= */
-
-@media (max-width: 900px) {
-
-    .hero-image {
-
-        width: 65%;
-
-        right: 2%;
-
-        opacity: 0.55;
-
-    }
-
-}
-
-
-/* =========================
-   RESPONSIVE MOBILE
-========================= */
-
-@media (max-width: 600px) {
-
-    .hero-image {
-
-        width: 100%;
-
-        height: 70%;
-
-        top: 15%;
-
-        right: 0;
-
-        opacity: 0.35;
-
-    }
-
-
-    .hero-image img {
-
-        -webkit-mask-image:
-            linear-gradient(
-                to bottom,
-
-                transparent 0%,
-
-                black 25%,
-
-                black 70%,
-
-                transparent 100%
-            );
-
-        mask-image:
-            linear-gradient(
-                to bottom,
-
-                transparent 0%,
-
-                black 25%,
-
-                black 70%,
-
-                transparent 100%
-            );
-
-    }
-
 }
