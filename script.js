@@ -21,7 +21,6 @@ window.addEventListener("scroll", () => {
 });
 
 
-
 /* =========================================
    SCROLL REVEAL
 ========================================= */
@@ -43,6 +42,8 @@ const observer = new IntersectionObserver(
 
                 entry.target.style.transform =
                     "translateY(0)";
+
+                observer.unobserve(entry.target);
 
             }
 
