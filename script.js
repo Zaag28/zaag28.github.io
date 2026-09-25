@@ -1,37 +1,56 @@
-document.addEventListener("DOMContentLoaded", function () {
+// =========================================
+// NAVBAR SCROLL EFFECT
+// =========================================
 
-    /* =========================================
-       NAVBAR
-    ========================================= */
+window.addEventListener("scroll", function () {
 
-    const navbar = document.getElementById("navbar");
+    var navbar = document.getElementById("navbar");
 
-    if (navbar) {
+    if (!navbar) {
+        return;
+    }
 
-        window.addEventListener("scroll", function () {
+    if (window.scrollY > 50) {
 
-            if (window.scrollY > 50) {
+        navbar.style.background = "rgba(8, 8, 12, 0.90)";
 
-                navbar.style.background = "rgba(8, 8, 12, 0.90)";
+    } else {
 
-            } else {
+        navbar.style.background = "rgba(8, 8, 12, 0.45)";
 
-                navbar.style.background = "rgba(8, 8, 12, 0.45)";
+    }
 
+});
+
+
+// =========================================
+// SCROLL REVEAL
+// =========================================
+
+window.addEventListener("load", function () {
+
+    var elements = document.querySelectorAll(
+        ".project-card, .skill-card, .timeline-item, .about-card"
+    );
+
+    var observer = new IntersectionObserver(function (entries) {
+
+        entries.forEach(function (entry) {
+
+            if (entry.isIntersecting) {
+
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+
+                observer.unobserve(entry.target);
             }
 
         });
 
-    }
+    }, {
+        threshold: 0.15
+    });
 
-
-    /* =========================================
-       SCROLL REVEAL
-    ========================================= */
-
-    const elements = document.querySelectorAll(
-        ".project-card, .skill-card, .timeline-item, .about-card"
-    );
 
     elements.forEach(function (element) {
 
@@ -39,36 +58,6 @@ document.addEventListener("DOMContentLoaded", function () {
         element.style.transform = "translateY(30px)";
         element.style.transition =
             "opacity 0.7s ease, transform 0.7s ease";
-
-    });
-
-
-    const observer = new IntersectionObserver(
-        function (entries) {
-
-            entries.forEach(function (entry) {
-
-                if (entry.isIntersecting) {
-
-                    entry.target.style.opacity = "1";
-
-                    entry.target.style.transform =
-                        "translateY(0)";
-
-                    observer.unobserve(entry.target);
-
-                }
-
-            });
-
-        },
-        {
-            threshold: 0.15
-        }
-    );
-
-
-    elements.forEach(function (element) {
 
         observer.observe(element);
 
