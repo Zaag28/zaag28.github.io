@@ -116,6 +116,8 @@ img {
     padding: 120px 8% 80px;
 
     overflow: hidden;
+
+    background: #08080c;
 }
 
 .hero-glow {
@@ -264,7 +266,7 @@ img {
 
 /* =========================================
    HOME IMAGE
-   Même position - cercle supprimé
+   SANS CERCLE / SANS FOND
 ========================================= */
 
 .hero-orbit {
@@ -276,22 +278,32 @@ img {
     height: 450px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
+
+    background: transparent !important;
+
+    border: none !important;
+
+    box-shadow: none !important;
 
     z-index: 5;
 }
 
 
-/* Suppression complète des cercles */
+/* Suppression des anciens cercles */
 
-.orbit {
-    display: none;
-}
-
+.orbit,
 .orbit-one,
 .orbit-two {
-    display: none;
+    display: none !important;
+
+    background: transparent !important;
+
+    border: none !important;
+
+    box-shadow: none !important;
 }
 
 
@@ -308,15 +320,15 @@ img {
     width: 320px;
     height: 380px;
 
-    border: none;
+    background: transparent !important;
 
-    border-radius: 0;
+    border: none !important;
+
+    border-radius: 0 !important;
+
+    box-shadow: none !important;
 
     overflow: visible;
-
-    background: transparent;
-
-    box-shadow: none;
 
     z-index: 5;
 }
@@ -332,22 +344,21 @@ img {
 
     display: block;
 
-    border: none;
+    background: transparent !important;
 
-    border-radius: 0;
+    border: none !important;
 
-    background: transparent;
+    border-radius: 0 !important;
 
-    box-shadow: none;
+    box-shadow: none !important;
 
-    filter:
-        drop-shadow(0 0 20px rgba(139, 92, 246, 0.10));
+    filter: none;
 
     transition: transform 0.6s ease;
 }
 
 
-/* Petit effet au survol */
+/* Effet léger au survol */
 
 .orbit-center:hover img {
     transform: scale(1.04);
@@ -892,7 +903,6 @@ footer a:hover {
     .skills-grid {
         grid-template-columns: 1fr 1fr;
     }
-
 }
 
 
@@ -930,9 +940,6 @@ footer a:hover {
         font-size: 17px;
     }
 
-
-    /* Image mobile */
-
     .hero-orbit {
         width: 330px;
         height: 330px;
@@ -944,13 +951,16 @@ footer a:hover {
         top: 570px;
 
         opacity: 1;
+
+        background: transparent !important;
     }
 
     .orbit-center {
         width: 250px;
         height: 300px;
-    }
 
+        background: transparent !important;
+    }
 
     .scroll-indicator {
         display: none;
@@ -981,7 +991,6 @@ footer a:hover {
 
         text-align: center;
     }
-
 }
 
 
@@ -1010,11 +1019,14 @@ footer a:hover {
 
     .hero-orbit {
         top: 560px;
+
+        background: transparent !important;
     }
 
     .orbit-center {
         width: 220px;
         height: 270px;
-    }
 
+        background: transparent !important;
+    }
 }
