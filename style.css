@@ -2,99 +2,87 @@
    HOME IMAGE
 ========================= */
 
-.hero {
-    position: relative;
-    overflow: hidden;
-}
-
 .hero-image {
     position: absolute;
+
+    right: 0;
     top: 0;
-    right: 2%;
+
     width: 55%;
-    height: 100%;
+    height: 100vh;
+
     z-index: 1;
+
     overflow: hidden;
+
     pointer-events: none;
 }
 
 .hero-image img {
     width: 100%;
     height: 100%;
+
     object-fit: cover;
+
     display: block;
 
-    -webkit-mask-image: linear-gradient(
-        to right,
-        transparent 0%,
-        rgba(0, 0, 0, 0.2) 12%,
-        rgba(0, 0, 0, 0.7) 30%,
-        black 45%,
-        black 82%,
-        transparent 100%
-    );
+    /*
+       Fondu de l'image vers le background
+       sur tous les côtés
+    */
+    -webkit-mask-image:
+        linear-gradient(
+            to right,
+            transparent 0%,
+            rgba(0,0,0,0.35) 15%,
+            black 38%,
+            black 75%,
+            transparent 100%
+        );
 
-    mask-image: linear-gradient(
-        to right,
-        transparent 0%,
-        rgba(0, 0, 0, 0.2) 12%,
-        rgba(0, 0, 0, 0.7) 30%,
-        black 45%,
-        black 82%,
-        transparent 100%
-    );
+    mask-image:
+        linear-gradient(
+            to right,
+            transparent 0%,
+            rgba(0,0,0,0.35) 15%,
+            black 38%,
+            black 75%,
+            transparent 100%
+        );
+
+    transition: transform 0.8s ease;
 }
+
+
+/* Fondu supplémentaire */
 
 .hero-image::after {
     content: "";
+
     position: absolute;
+
     inset: 0;
 
-    background: linear-gradient(
-        to bottom,
-        #08080c 0%,
-        transparent 18%,
-        transparent 80%,
-        #08080c 100%
-    );
+    background:
+        linear-gradient(
+            to bottom,
+            #08080c 0%,
+            transparent 15%,
+            transparent 80%,
+            #08080c 100%
+        ),
 
-    pointer-events: none;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 5;
-}
-
-.scroll-indicator {
-    position: relative;
-    z-index: 5;
+        linear-gradient(
+            to right,
+            #08080c 0%,
+            transparent 35%,
+            transparent 100%
+        );
 }
 
 
-/* TABLET */
+/* Petit mouvement */
 
-@media (max-width: 900px) {
-
-    .hero-image {
-        width: 65%;
-        right: 0;
-        opacity: 0.55;
-    }
-
-}
-
-
-/* MOBILE */
-
-@media (max-width: 600px) {
-
-    .hero-image {
-        width: 100%;
-        height: 70%;
-        top: 15%;
-        right: 0;
-        opacity: 0.30;
-    }
-
+.hero-image:hover img {
+    transform: scale(1.03);
 }
