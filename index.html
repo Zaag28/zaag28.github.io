@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,7 +26,9 @@
 
 <body>
 
-<!-- NAVIGATION -->
+<!-- =========================
+     NAVIGATION
+========================= -->
 
 <header class="navbar" id="navbar">
 
@@ -40,10 +43,12 @@
         <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
 
+        <!-- DOWNLOAD CV -->
         <a
-            href="cv/CV_Zeineb_Zaag.pdf"
+            href="cv.pdf"
             class="nav-cv"
             target="_blank"
+            rel="noopener noreferrer"
         >
             Download CV
         </a>
@@ -52,7 +57,9 @@
 </header>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <section id="home" class="hero">
 
@@ -87,13 +94,14 @@
                 <span>↗</span>
             </a>
 
-            <a
-                href="cv/CV_Zeineb_Zaag.pdf"
+            <!-- VIEW CV -->
+            <button
+                type="button"
                 class="secondary-button"
-                target="_blank"
+                id="view-cv-btn"
             >
                 View CV
-            </a>
+            </button>
 
         </div>
 
@@ -110,7 +118,9 @@
         <div class="orbit-center">
 
             <img
-                src="home.png">
+                src="home.png"
+                alt="Zeineb Zaag"
+            >
 
         </div>
 
@@ -128,7 +138,9 @@
 </section>
 
 
-<!-- ABOUT -->
+<!-- =========================
+     ABOUT
+========================= -->
 
 <section id="about" class="section">
 
@@ -175,8 +187,11 @@
 
 
         <div class="about-card">
-        <img src="moi.png" >
-</div>
+
+            <img
+                src="moi.png"
+                alt="Zeineb Zaag"
+            >
 
         </div>
 
@@ -185,7 +200,9 @@
 </section>
 
 
-<!-- PROJECTS -->
+<!-- =========================
+     PROJECTS
+========================= -->
 
 <section id="projects" class="section projects-section">
 
@@ -354,7 +371,9 @@
 </section>
 
 
-<!-- SKILLS -->
+<!-- =========================
+     SKILLS
+========================= -->
 
 <section id="skills" class="section">
 
@@ -473,7 +492,9 @@
 </section>
 
 
-<!-- EXPERIENCE -->
+<!-- =========================
+     EXPERIENCE
+========================= -->
 
 <section id="experience" class="section experience-section">
 
@@ -550,7 +571,9 @@
 </section>
 
 
-<!-- CONTACT -->
+<!-- =========================
+     CONTACT
+========================= -->
 
 <section id="contact" class="section contact-section">
 
@@ -600,7 +623,44 @@
 </section>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     CV MODAL
+========================= -->
+
+<div class="cv-modal" id="cv-modal">
+
+    <div class="cv-modal-content">
+
+        <div class="cv-modal-header">
+
+            <h3>
+                Zeineb Zaag — CV
+            </h3>
+
+            <button
+                type="button"
+                class="cv-close"
+                id="cv-close"
+                aria-label="Close CV"
+            >
+                ×
+            </button>
+
+        </div>
+
+        <iframe
+            src="cv.pdf"
+            title="Zeineb Zaag CV"
+        ></iframe>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -623,3 +683,4 @@
 
 </body>
 </html>
+```
