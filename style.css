@@ -1069,21 +1069,18 @@ footer a:hover {
 
     gap: 12px;
 
-    padding: 14px 22px;
+   padding: 14px 22px;
+margin-top: 20px;
+margin-left: 30px;
 
-    border-radius: 30px;
+border-radius: 30px;
+border: 1px solid rgba(255, 255, 255, 0.15);
+background: transparent;
+color: #d8d8df;
 
-    border: 1px solid rgba(255, 255, 255, 0.15);
-
-    background: transparent;
-
-    color: #d8d8df;
-
-    font-size: 13px;
-
-    cursor: pointer;
-
-    transition: 0.3s ease;
+font-size: 13px;
+cursor: pointer;
+transition: 0.3s ease;
 }
 
 .demo-button:hover {
