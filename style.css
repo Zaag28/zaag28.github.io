@@ -1095,3 +1095,37 @@ transition: 0.3s ease;
     justify-content: center;
     margin-top: 20px;
 }
+.demo-button-container {
+display: flex;
+justify-content: center;
+width: 100%;
+margin-top: 28px;
+}
+
+.demo-button {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+gap: 12px;
+
+padding: 14px 26px;
+
+border-radius: 30px;
+border: 1px solid rgba(255, 255, 255, 0.15);
+
+background: transparent;
+color: #d8d8df;
+
+font-size: 13px;
+text-decoration: none;
+cursor: pointer;
+
+transition: 0.3s ease;
+
+}
+
+.demo-button {
+border-color: #9b6cff;
+color: white;
+transform: translateY(-3px);
+}
