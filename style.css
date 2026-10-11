@@ -1093,3 +1093,8 @@ footer a:hover {
 
     transform: translateY(-3px);
 }
+.demo-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
